@@ -66,7 +66,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom Ripiiaia colors - softer palette
+				// Cores inspiradas na floresta amazônica - mais claras e suaves
 				emerald: {
 					50: 'hsl(var(--emerald-50))',
 					100: 'hsl(var(--emerald-100))',
@@ -79,6 +79,33 @@ export default {
 					800: 'hsl(var(--emerald-800))',
 					900: 'hsl(var(--emerald-900))',
 				},
+				// Tons de terra e madeira - mais claros
+				amber: {
+					50: 'hsl(var(--amber-50))',
+					100: 'hsl(var(--amber-100))',
+					200: 'hsl(var(--amber-200))',
+					300: 'hsl(var(--amber-300))',
+					400: 'hsl(var(--amber-400))',
+					500: 'hsl(var(--amber-500))',
+					600: 'hsl(var(--amber-600))',
+					700: 'hsl(var(--amber-700))',
+					800: 'hsl(var(--amber-800))',
+					900: 'hsl(var(--amber-900))',
+				},
+				// Tons de céu e água - suaves
+				sky: {
+					50: 'hsl(var(--sky-50))',
+					100: 'hsl(var(--sky-100))',
+					200: 'hsl(var(--sky-200))',
+					300: 'hsl(var(--sky-300))',
+					400: 'hsl(var(--sky-400))',
+					500: 'hsl(var(--sky-500))',
+					600: 'hsl(var(--sky-600))',
+					700: 'hsl(var(--sky-700))',
+					800: 'hsl(var(--sky-800))',
+					900: 'hsl(var(--sky-900))',
+				},
+				// Tons neutros mais suaves
 				sage: {
 					50: 'hsl(var(--sage-50))',
 					100: 'hsl(var(--sage-100))',

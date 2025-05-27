@@ -11,8 +11,8 @@ const SubdomainsSection = () => {
       url: "portal.ripiiaia.org",
       route: "/portal",
       icon: Building,
-      color: "bg-emerald-500",
-      hoverColor: "hover:bg-emerald-600",
+      color: "bg-emerald-400",
+      hoverColor: "hover:bg-emerald-500",
       features: ["Projetos Sociais", "Equipe Multidisciplinar", "Parcerias Globais", "Transparência"]
     },
     {
@@ -22,8 +22,8 @@ const SubdomainsSection = () => {
       url: "daime.ripiiaia.org",
       route: "/daime",
       icon: Heart,
-      color: "bg-amber-500",
-      hoverColor: "hover:bg-amber-600",
+      color: "bg-amber-400",
+      hoverColor: "hover:bg-amber-500",
       features: ["Hinários Sagrados", "Acervo Histórico", "Vídeos & Áudios", "Memória Viva"]
     },
     {
@@ -33,8 +33,8 @@ const SubdomainsSection = () => {
       url: "radio.ripiiaia.org",
       route: "/radio",
       icon: Radio,
-      color: "bg-blue-500",
-      hoverColor: "hover:bg-blue-600",
+      color: "bg-sky-400",
+      hoverColor: "hover:bg-sky-500",
       features: ["Música Espiritual", "Cultura Amazônica", "Programação Autoral", "Transmissão 24h"]
     },
     {
@@ -44,18 +44,18 @@ const SubdomainsSection = () => {
       url: "ripiiaia.com.br",
       route: "/servicos",
       icon: Wrench,
-      color: "bg-slate-600",
-      hoverColor: "hover:bg-slate-700",
+      color: "bg-sage-500",
+      hoverColor: "hover:bg-sage-600",
       features: ["Hospedagem Web", "Registro de Domínios", "Desenvolvimento", "Suporte Técnico"]
     }
   ];
 
   return (
-    <section id="espacos" className="py-20 px-4 bg-white/50">
+    <section id="espacos" className="py-20 px-4 bg-gradient-to-br from-emerald-50/50 to-amber-50/50 dark:from-slate-900/50 dark:to-emerald-950/20">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold mb-4 text-gray-800">Nossos Espaços</h3>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h3 className="text-4xl font-bold mb-4 text-foreground">Nossos Espaços</h3>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Cada subdomínio com sua especialidade, unidos pela missão de transformação social e espiritual
           </p>
         </div>

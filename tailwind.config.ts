@@ -66,21 +66,43 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom Ripiiaia colors
+				// Custom Ripiiaia colors - softer palette
 				emerald: {
-					50: '#ecfdf5',
-					500: '#10b981',
-					600: '#059669',
-					700: '#047857',
+					50: 'hsl(var(--emerald-50))',
+					100: 'hsl(var(--emerald-100))',
+					200: 'hsl(var(--emerald-200))',
+					300: 'hsl(var(--emerald-300))',
+					400: 'hsl(var(--emerald-400))',
+					500: 'hsl(var(--emerald-500))',
+					600: 'hsl(var(--emerald-600))',
+					700: 'hsl(var(--emerald-700))',
+					800: 'hsl(var(--emerald-800))',
+					900: 'hsl(var(--emerald-900))',
 				},
-				amber: {
-					500: '#f59e0b',
-					600: '#d97706',
+				sage: {
+					50: 'hsl(var(--sage-50))',
+					100: 'hsl(var(--sage-100))',
+					200: 'hsl(var(--sage-200))',
+					300: 'hsl(var(--sage-300))',
+					400: 'hsl(var(--sage-400))',
+					500: 'hsl(var(--sage-500))',
+					600: 'hsl(var(--sage-600))',
+					700: 'hsl(var(--sage-700))',
+					800: 'hsl(var(--sage-800))',
+					900: 'hsl(var(--sage-900))',
 				},
-				forest: {
-					500: '#166534',
-					600: '#15803d',
-					700: '#14532d',
+				slate: {
+					50: '#f8fafc',
+					100: '#f1f5f9',
+					200: '#e2e8f0',
+					300: '#cbd5e1',
+					400: '#94a3b8',
+					500: '#64748b',
+					600: '#475569',
+					700: '#334155',
+					800: '#1e293b',
+					900: '#0f172a',
+					950: '#020617',
 				}
 			},
 			borderRadius: {

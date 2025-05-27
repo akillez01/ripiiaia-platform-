@@ -1,8 +1,8 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Globe, Heart, Radio, Wrench, Leaf, Users, Music, Building } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const subdomains = [
@@ -11,6 +11,7 @@ const Index = () => {
       subtitle: "A Plataforma Profissional",
       description: "ONG e startup colaborativa com equipe multidisciplinar. Projetos sociais, parcerias institucionais e transparência organizacional.",
       url: "portal.ripiiaia.org",
+      route: "/portal",
       icon: Building,
       color: "bg-emerald-500",
       hoverColor: "hover:bg-emerald-600",
@@ -21,6 +22,7 @@ const Index = () => {
       subtitle: "Espiritualidade e Tradição",
       description: "Espaço sagrado dedicado aos ensinamentos do Mestre Irineu e da doutrina do Daime. Hinários, acervo histórico e musicalidade sagrada.",
       url: "daime.ripiiaia.org",
+      route: "/daime",
       icon: Heart,
       color: "bg-amber-500",
       hoverColor: "hover:bg-amber-600",
@@ -31,6 +33,7 @@ const Index = () => {
       subtitle: "Música e Cultura Amazônica",
       description: "Rádio online com programação voltada à música espiritual, cultura amazônica e conteúdos autorais. Conectando corações através do som.",
       url: "radio.ripiiaia.org",
+      route: "/radio",
       icon: Radio,
       color: "bg-blue-500",
       hoverColor: "hover:bg-blue-600",
@@ -41,6 +44,7 @@ const Index = () => {
       subtitle: "Soluções Tecnológicas",
       description: "Braço comercial oferecendo serviços profissionais: hospedagem, domínios, criação de sites e suporte técnico especializado.",
       url: "ripiiaia.com.br",
+      route: "/servicos",
       icon: Wrench,
       color: "bg-slate-600",
       hoverColor: "hover:bg-slate-700",
@@ -106,12 +110,14 @@ const Index = () => {
             Cada espaço com sua missão única, unidos pelo propósito de promover harmonia, inclusão e desenvolvimento humano.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-              Explorar Espaços
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white" asChild>
+              <a href="#espacos">
+                Explorar Espaços
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
-              Nossa História
+            <Button size="lg" variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50" asChild>
+              <a href="#valores">Nossa História</a>
             </Button>
           </div>
         </div>
@@ -159,10 +165,12 @@ const Index = () => {
                     </div>
                     <Button 
                       className={`w-full mt-4 ${subdomain.color} ${subdomain.hoverColor} text-white`}
-                      onClick={() => window.open(`https://${subdomain.url}`, '_blank')}
+                      asChild
                     >
-                      Acessar {subdomain.title}
-                      <ArrowRight className="ml-2 w-4 h-4" />
+                      <Link to={subdomain.route}>
+                        Acessar {subdomain.title}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -244,12 +252,14 @@ const Index = () => {
             Explore, participe e colabore nessa jornada de transformação coletiva
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-              Conhecer Projetos
-              <Users className="ml-2 w-5 h-5" />
+            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white" asChild>
+              <Link to="/portal">
+                Conhecer Projetos
+                <Users className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
-              Fazer Parte da Equipe
+            <Button size="lg" variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50" asChild>
+              <Link to="/portal">Fazer Parte da Equipe</Link>
             </Button>
           </div>
         </div>
@@ -273,19 +283,19 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-4">Nossos Espaços</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Portal Ripiiaia</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Universo Daime</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Rádio Ripiiaia</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Serviços</a></li>
+                <li><Link to="/portal" className="hover:text-white transition-colors">Portal Ripiiaia</Link></li>
+                <li><Link to="/daime" className="hover:text-white transition-colors">Universo Daime</Link></li>
+                <li><Link to="/radio" className="hover:text-white transition-colors">Rádio Ripiiaia</Link></li>
+                <li><Link to="/servicos" className="hover:text-white transition-colors">Serviços</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Sobre</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Nossa Missão</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Equipe</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Transparência</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Parcerias</a></li>
+                <li><a href="#valores" className="hover:text-white transition-colors">Nossa Missão</a></li>
+                <li><Link to="/portal" className="hover:text-white transition-colors">Equipe</Link></li>
+                <li><Link to="/portal" className="hover:text-white transition-colors">Transparência</Link></li>
+                <li><Link to="/portal" className="hover:text-white transition-colors">Parcerias</Link></li>
               </ul>
             </div>
             <div>

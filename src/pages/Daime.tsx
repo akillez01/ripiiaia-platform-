@@ -1,8 +1,7 @@
-
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Heart, Music, BookOpen, Video, Download, Star } from "lucide-react";
+import { ArrowLeft, BookOpen, Download, Heart, Music, Star, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Daime = () => {
@@ -74,9 +73,18 @@ const Daime = () => {
       {/* Hero Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto text-center max-w-4xl">
-          <Badge variant="outline" className="mb-6 border-amber-200 text-amber-700">
-            🌟 Sagrado e Eterno
-          </Badge>
+          <div className="flex flex-col items-center gap-2 mb-6">
+            <span className="text-2xl text-amber-700"><span role="img" aria-label="estrela">🌟</span></span>
+            <span className="text-base font-serif text-amber-700">Sagrado e Eterno</span>
+          </div>
+          <a
+            href="https://akillez01.github.io/Ripi-Iaia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 mb-8 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-base font-semibold rounded-lg shadow transition-colors"
+          >
+            Clique para entrar no universo Daime
+          </a>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
             Hinários, Tradição e Ensinamentos
           </h2>

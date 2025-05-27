@@ -1,23 +1,22 @@
-
-import { Leaf } from "lucide-react";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { Leaf } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="bg-background/95 backdrop-blur-md border-b border-border sticky top-0 z-50 soft-shadow">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Leaf className="w-6 h-6 text-white" />
+          <Link
+            to="/"
+            className="flex flex-col items-start gap-0"
+          >
+            <div className="flex items-center gap-2 text-xl md:text-2xl font-bold gradient-text">
+              <Leaf className="h-6 w-6 text-white" />
+              <span className="block text-white">Ripi Iaiá</span>
             </div>
-            <div>
-              <h1 className="text-2xl font-bold gradient-text">
-                Ripiiaia
-              </h1>
-              <p className="text-sm text-muted-foreground">Plataforma Multifacetada</p>
-            </div>
-          </div>
+            <span className="text-xs font-serif text-white/80 ml-8 -mt-1">Plataforma</span>
+          </Link>
           <div className="flex items-center space-x-4">
             <nav className="hidden md:flex space-x-6">
               <a href="#sobre" className="text-foreground/80 hover:text-emerald-600 transition-colors duration-200 font-medium">Sobre</a>

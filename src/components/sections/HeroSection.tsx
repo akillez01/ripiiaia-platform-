@@ -1,7 +1,7 @@
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -19,13 +19,13 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in stagger-2">
           <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg hover:shadow-xl transition-all duration-300" asChild>
-            <a href="#espacos">
+            <Link to="/portal">
               Explorar Espaços
               <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+            </Link>
           </Button>
           <Button size="lg" variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 shadow-md hover:shadow-lg transition-all duration-300" asChild>
-            <a href="#valores">Nossa História</a>
+            <Link to="/sobre">Nossa História</Link>
           </Button>
         </div>
       </div>

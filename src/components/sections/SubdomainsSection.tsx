@@ -1,5 +1,6 @@
 import { Building, Heart, Radio, Wrench } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const SubdomainsSection = () => {
   // Imagens de fundo para o carrossel (IA/tech/natureza)
@@ -108,12 +109,12 @@ const SubdomainsSection = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={subdomain.route}
+                <Link
+                  to={subdomain.route}
                   className="inline-block mt-auto px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white font-semibold shadow-lg transition-all text-center"
                 >
                   Acessar
-                </a>
+                </Link>
               </div>
             </div>
           ))}

@@ -41,12 +41,12 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>🌿 ripiiaia.org</li>
               <li>📧 contato@ripiiaia.org</li>
-              <li>🌍 Acre, Brasil</li>
+              <li>🌍 Manaus, Brasil</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2024 Ripiiaia. Todos os direitos reservados. Feito com 💚 na Floresta Amazônica.</p>
+          <p>&copy; 2025 Ripiiaia. Todos os direitos reservados. Feito com 💚 na Floresta Amazônica.</p>
         </div>
       </div>
     </footer>

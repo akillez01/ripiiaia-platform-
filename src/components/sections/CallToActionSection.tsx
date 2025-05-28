@@ -18,14 +18,25 @@ const CadastroEquipePanel = ({ open, onClose }: { open: boolean; onClose: () => 
         ) : (
           <form
             className="flex flex-col gap-4"
-            onSubmit={e => {
+            onSubmit={async e => {
               e.preventDefault();
-              setEnviado(true);
+              try {
+                const res = await fetch("http://localhost:3001/api/contato", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(form)
+                });
+                if (res.ok) setEnviado(true);
+                else alert("Erro ao enviar. Tente novamente.");
+              } catch {
+                alert("Erro ao enviar. Tente novamente.");
+              }
             }}
           >
             <input
               className="border rounded px-3 py-2"
               placeholder="Nome completo"
+              name="Nome"
               value={form.nome}
               onChange={e => setForm(f => ({ ...f, nome: e.target.value }))}
               required
@@ -34,6 +45,7 @@ const CadastroEquipePanel = ({ open, onClose }: { open: boolean; onClose: () => 
               className="border rounded px-3 py-2"
               placeholder="E-mail"
               type="email"
+              name="Email"
               value={form.email}
               onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
               required
@@ -41,9 +53,24 @@ const CadastroEquipePanel = ({ open, onClose }: { open: boolean; onClose: () => 
             <input
               className="border rounded px-3 py-2"
               placeholder="Função desejada (ex: Produtor, Músico...)"
+              name="Funcao"
               value={form.funcao}
               onChange={e => setForm(f => ({ ...f, funcao: e.target.value }))}
               required
+            />
+            <textarea
+              className="border rounded px-3 py-2 min-h-[80px]"
+              placeholder="Conte um pouco sobre você (opcional)"
+              name="Sobre"
+              value={form.sobre || ''}
+              onChange={e => setForm(f => ({ ...f, sobre: e.target.value }))}
+            />
+            <input
+              className="border rounded px-3 py-2"
+              type="file"
+              name="curriculo"
+              accept=".pdf,.doc,.docx,.odt,.txt"
+              onChange={e => setForm(f => ({ ...f, curriculo: e.target.files?.[0] }))}
             />
             <button type="submit" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded px-4 py-2 mt-2">Enviar</button>
           </form>
@@ -67,21 +94,21 @@ const CallToActionSection = () => {
           {/* CEO */}
           <div className="flex flex-col items-center bg-white/80 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
             <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="CEO" className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-emerald-400" />
-            <h4 className="text-xl font-semibold text-gray-800">João Silva</h4>
+            <h4 className="text-xl font-semibold text-gray-800">Jorge</h4>
             <span className="text-emerald-600 font-medium mb-1">CEO</span>
             <p className="text-gray-600 text-sm">Liderança estratégica, inovação e visão social.</p>
           </div>
           {/* Webmaster */}
           <div className="flex flex-col items-center bg-white/80 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Webmaster" className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-emerald-400" />
-            <h4 className="text-xl font-semibold text-gray-800">Carlos Mendes</h4>
+            <img src="./images/achilles.jpeg" alt="Webmaster" className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-emerald-400" />
+            <h4 className="text-xl font-semibold text-gray-800">Achillhes Souza</h4>
             <span className="text-emerald-600 font-medium mb-1">Webmaster</span>
             <p className="text-gray-600 text-sm">Desenvolvimento, infraestrutura e tecnologia.</p>
           </div>
           {/* Jornalista */}
           <div className="flex flex-col items-center bg-white/80 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
             <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Jornalista" className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-emerald-400" />
-            <h4 className="text-xl font-semibold text-gray-800">Maria Oliveira</h4>
+            <h4 className="text-xl font-semibold text-gray-800">Fátima</h4>
             <span className="text-emerald-600 font-medium mb-1">Jornalista</span>
             <p className="text-gray-600 text-sm">Comunicação, conteúdo e cultura.</p>
           </div>

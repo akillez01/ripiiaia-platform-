@@ -1,6 +1,6 @@
 
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
@@ -14,7 +14,7 @@ const HeroSection = () => {
           Conexão, Crescimento e Intercâmbio de Saberes
         </h2>
         <p className="text-xl text-foreground/80 mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in stagger-1">
-          Uma plataforma multifacetada que une espiritualidade, cultura, inovação social e serviços profissionais. 
+          Uma plataforma multifacetada que une cultura, inovação social e serviços profissionais. 
           Cada espaço com sua missão única, unidos pelo propósito de promover harmonia, inclusão e desenvolvimento humano.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in stagger-2">

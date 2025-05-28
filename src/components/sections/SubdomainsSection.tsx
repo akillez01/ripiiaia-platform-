@@ -4,7 +4,7 @@ import SubdomainCard from "./SubdomainCard";
 const SubdomainsSection = () => {
   const subdomains = [
     {
-      title: "Portal Ripiiaia",
+      title: "Portal Ripi Iaiá",
       subtitle: "A Plataforma Profissional",
       description: "ONG e startup colaborativa com equipe multidisciplinar. Projetos sociais, parcerias institucionais e transparência organizacional.",
       url: "portal.ripiiaia.org",
@@ -15,7 +15,7 @@ const SubdomainsSection = () => {
       features: ["Projetos Sociais", "Equipe Multidisciplinar", "Parcerias Globais", "Transparência"]
     },
     {
-      title: "Universo Daime",
+      title: "Comunidades",
       subtitle: "Espiritualidade e Tradição",
       description: "Espaço sagrado dedicado aos ensinamentos do Mestre Irineu e da doutrina do Daime. Hinários, acervo histórico e musicalidade sagrada.",
       url: "daime.ripiiaia.org",
@@ -26,7 +26,7 @@ const SubdomainsSection = () => {
       features: ["Hinários Sagrados", "Acervo Histórico", "Vídeos & Áudios", "Memória Viva"]
     },
     {
-      title: "Rádio Ripiiaia",
+      title: "Comunicação",
       subtitle: "Música e Cultura Amazônica",
       description: "Rádio online com programação voltada à música espiritual, cultura amazônica e conteúdos autorais. Conectando corações através do som.",
       url: "radio.ripiiaia.org",
@@ -37,7 +37,7 @@ const SubdomainsSection = () => {
       features: ["Música Espiritual", "Cultura Amazônica", "Programação Autoral", "Transmissão 24h"]
     },
     {
-      title: "Ripiiaia Serviços",
+      title: "Serviços",
       subtitle: "Soluções Tecnológicas",
       description: "Braço comercial oferecendo serviços profissionais: hospedagem, domínios, criação de sites e suporte técnico especializado.",
       url: "ripiiaia.com.br",

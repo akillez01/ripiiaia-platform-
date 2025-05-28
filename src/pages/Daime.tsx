@@ -1,49 +1,58 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, BookOpen, Download, Heart, Music, Star, Video } from "lucide-react";
+import { ArrowLeft, Heart, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Daime = () => {
-  const hinarios = [
+  const plataformas = [
     {
-      title: "O Cruzeiro",
-      author: "Mestre Irineu",
-      songs: 132,
-      type: "Tradicional"
+      title: "Cânticos da Floresta Online",
+      description: "Portal de hinários, músicas e saberes da floresta.",
+      url: "https://akillez01.github.io/canticos-da-floresta-online/",
+      type: "Hinários"
     },
     {
-      title: "Lua Branca",
-      author: "Padrinho Alfredo",
-      songs: 24,
-      type: "Alto Santo"
+      title: "Ripi Iaiá - Universo Daime",
+      description: "Conteúdo, cultura e espiritualidade do Daime e medicinas da floresta.",
+      url: "https://akillez01.github.io/Ripi-Iaia/",
+      type: "Portal"
     },
     {
-      title: "Nova Jerusalém",
-      author: "Padrinho Sebastião",
-      songs: 90,
-      type: "CEFLURIS"
-    }
-  ];
-
-  const multimedia = [
-    {
-      title: "Documentário: Juramidam",
-      type: "Vídeo",
-      duration: "45 min",
-      description: "A história do Mestre Irineu"
+      title: "Ripiiaia Platform",
+      description: "Plataforma multifacetada de espiritualidade, cultura e inovação social.",
+      url: "https://akillez01.github.io/ripiiaia-platform-/",
+      type: "Plataforma"
     },
     {
-      title: "Hinários Gravados",
-      type: "Áudio",
-      duration: "6 horas",
-      description: "Coletânea de trabalhos tradicionais"
+      title: "Igreja do Culto Eclético da Fluente Luz Universal Patrono Sebastião (ICEFLU)",
+      description: "Organização internacional do Daime.",
+      url: "https://iceflu.org/",
+      type: "Igreja"
     },
     {
-      title: "Fotografias Históricas",
-      type: "Galeria",
-      duration: "100+ fotos",
-      description: "Acervo visual da doutrina"
+      title: "Barquinha (Alto Santo)",
+      description: "Tradição Barquinha do Daime, Acre.",
+      url: "https://barquinha.org/",
+      type: "Tradição"
+    },
+    {
+      title: "União do Vegetal (UDV)",
+      description: "Centro de estudos do vegetal e espiritualidade.",
+      url: "https://udv.org.br/",
+      type: "Centro"
+    },
+    {
+      title: "Ayahuasca.com",
+      description: "Portal internacional sobre Ayahuasca, ciência e cultura.",
+      url: "https://www.ayahuasca.com/",
+      type: "Portal"
+    },
+    {
+      title: "Santo Daime Internacional",
+      description: "Rede global de informações sobre o Santo Daime.",
+      url: "https://www.santodaime.org/",
+      type: "Portal"
     }
   ];
 
@@ -75,93 +84,38 @@ const Daime = () => {
         <div className="container mx-auto text-center max-w-4xl">
           <div className="flex flex-col items-center gap-2 mb-6">
             <span className="text-2xl text-amber-700"><span role="img" aria-label="estrela">🌟</span></span>
-            <span className="text-base font-serif text-amber-700">Sagrado e Eterno</span>
+            <span className="text-base font-serif text-amber-700">Portais do Sagrado e da Diversidade</span>
           </div>
-          <a
-            href="https://akillez01.github.io/Ripi-Iaia/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-2 mb-8 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-base font-semibold rounded-lg shadow transition-colors"
-          >
-            Clique para entrar no universo Daime
-          </a>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-            Hinários, Tradição e Ensinamentos
+            Plataformas, Centros e Comunidades
           </h2>
           <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-            Espaço sagrado dedicado aos ensinamentos do Mestre Irineu e da doutrina do Daime. 
-            Aqui preservamos e compartilhamos a musicalidade sagrada, hinários, acervo histórico 
-            e a memória viva da floresta.
+            Explore portais, centros, tradições e comunidades que fazem parte do universo do Daime, Ayahuasca, Umbanda e linhas afins. Conheça, conecte-se e acesse conteúdos, saberes e redes de espiritualidade.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-amber-600 hover:bg-amber-700">
-              <Music className="mr-2 w-5 h-5" />
-              Explorar Hinários
-            </Button>
-            <Button size="lg" variant="outline" className="border-amber-600 text-amber-600">
-              <BookOpen className="mr-2 w-5 h-5" />
-              Acervo Histórico
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* Hinários */}
+      {/* Plataformas e Portais */}
       <section className="py-16 px-4 bg-white/50">
         <div className="container mx-auto max-w-6xl">
-          <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">Hinários Sagrados</h3>
+          <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">Portais e Plataformas Associadas</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {hinarios.map((hinario, index) => (
+            {plataformas.map((plataforma, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 group">
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <CardTitle className="text-lg group-hover:text-amber-600 transition-colors">
-                      {hinario.title}
+                      {plataforma.title}
                     </CardTitle>
-                    <Badge variant="secondary">{hinario.type}</Badge>
+                    <Badge variant="secondary">{plataforma.type}</Badge>
                   </div>
                   <CardDescription className="text-amber-700 font-medium">
-                    {hinario.author}
+                    {plataforma.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Music className="w-4 h-4 mr-2" />
-                      {hinario.songs} hinos
-                    </div>
-                    <Button size="sm" variant="outline" className="border-amber-600 text-amber-600">
-                      <Download className="w-4 h-4 mr-2" />
-                      Baixar
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Multimídia */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">Acervo Multimídia</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {multimedia.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-2">
-                    {item.type === "Vídeo" && <Video className="w-6 h-6 text-amber-600" />}
-                    {item.type === "Áudio" && <Music className="w-6 h-6 text-amber-600" />}
-                    {item.type === "Galeria" && <BookOpen className="w-6 h-6 text-amber-600" />}
-                    <CardTitle className="text-lg">{item.title}</CardTitle>
-                  </div>
-                  <Badge variant="outline" className="w-fit">{item.duration}</Badge>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{item.description}</p>
-                  <Button className="w-full bg-amber-600 hover:bg-amber-700">
-                    Acessar Conteúdo
+                  <Button asChild className="w-full bg-amber-600 hover:bg-amber-700">
+                    <a href={plataforma.url} target="_blank" rel="noopener noreferrer">Acessar Portal</a>
                   </Button>
                 </CardContent>
               </Card>
@@ -175,11 +129,10 @@ const Daime = () => {
         <div className="container mx-auto text-center max-w-4xl">
           <h3 className="text-3xl font-bold mb-6">Tradições Respeitadas</h3>
           <p className="text-xl mb-8 opacity-90">
-            Honramos todas as expressões da doutrina: Alto Santo, Barquinha, linha do Saturnino e demais ramificações, 
-            preservando a diversidade e riqueza dos ensinamentos da floresta.
+            Honramos todas as expressões da doutrina e das medicinas da floresta, preservando a diversidade e riqueza dos ensinamentos espirituais.
           </p>
           <div className="grid md:grid-cols-4 gap-6">
-            {["Alto Santo", "Barquinha", "CEFLURIS", "Outras Linhas"].map((tradicao, index) => (
+            {["Alto Santo", "Barquinha", "CEFLURIS", "Umbanda", "Ayahuasca", "Outras Linhas"].map((tradicao, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Star className="w-8 h-8" />

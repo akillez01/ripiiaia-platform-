@@ -1,16 +1,15 @@
-
-import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import Index from "./pages/Index";
-import Portal from "./pages/Portal";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Daime from "./pages/Daime";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import Portal from "./pages/Portal";
 import RadioRipiiaia from "./pages/Radio";
 import Servicos from "./pages/Servicos";
-import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +19,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/portal" element={<Portal />} />
@@ -29,7 +28,7 @@ const App = () => (
             <Route path="/servicos" element={<Servicos />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>

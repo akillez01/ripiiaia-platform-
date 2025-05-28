@@ -19,9 +19,9 @@ const Header = () => {
           </Link>
           <div className="flex items-center space-x-4">
             <nav className="hidden md:flex space-x-6">
-              <a href="#sobre" className="text-foreground/80 hover:text-emerald-600 transition-colors duration-200 font-medium">Sobre</a>
-              <a href="#espacos" className="text-foreground/80 hover:text-emerald-600 transition-colors duration-200 font-medium">Espaços</a>
-              <a href="#valores" className="text-foreground/80 hover:text-emerald-600 transition-colors duration-200 font-medium">Valores</a>
+              <Link to="/portal#sobre" className="text-foreground/80 hover:text-emerald-600 transition-colors duration-200 font-medium">Sobre</Link>
+              <Link to="/portal#espacos" className="text-foreground/80 hover:text-emerald-600 transition-colors duration-200 font-medium">Espaços</Link>
+              <Link to="/portal#valores" className="text-foreground/80 hover:text-emerald-600 transition-colors duration-200 font-medium">Valores</Link>
             </nav>
             <ThemeToggle />
           </div>

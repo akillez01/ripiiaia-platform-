@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-amber-500 rounded-full flex items-center justify-center">
                 <Leaf className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">Ripiiaia</span>
+              <span className="text-xl font-bold">Ripi Iaiá</span>
             </div>
             <p className="text-gray-400 text-sm">
               Plataforma multifacetada unindo espiritualidade, cultura e inovação social.

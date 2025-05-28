@@ -1,10 +1,9 @@
-
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Radio, Play, Pause, Volume2, Calendar, Clock, Mic } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowLeft, Mic, Pause, Play, Radio, Volume2 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const RadioRipiiaia = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -64,7 +63,7 @@ const RadioRipiiaia = () => {
               <Radio className="w-8 h-8 text-blue-600" />
               <div>
                 <h1 className="text-xl font-bold text-gray-800">Rádio Ripiiaia</h1>
-                <p className="text-sm text-gray-600">Música e Cultura Amazônica</p>
+                <p className="text-sm text-gray-600">Música, Jornal, IPTV & Cultura Amazônica</p>
               </div>
             </div>
           </div>
@@ -81,14 +80,12 @@ const RadioRipiiaia = () => {
           <p className="text-lg mb-8 opacity-90">
             Música espiritual, cultura amazônica e conteúdos autorais conectando corações através do som
           </p>
-          
           {/* Player de Rádio */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 max-w-md mx-auto">
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-2">Manhã na Floresta</h3>
               <p className="opacity-90">Ana Sagrada • Ao vivo</p>
             </div>
-            
             <div className="flex items-center justify-center space-x-6">
               <Button
                 size="lg"
@@ -109,31 +106,48 @@ const RadioRipiiaia = () => {
         </div>
       </section>
 
-      {/* Programação */}
+      {/* Jornal e IPTV */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">Programação Diária</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {programs.map((program, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-2">
-                    <Mic className="w-6 h-6 text-blue-600" />
-                    <CardTitle className="text-lg">{program.name}</CardTitle>
-                  </div>
-                  <div className="flex items-center space-x-2 text-blue-600">
-                    <Clock className="w-4 h-4" />
-                    <span className="font-medium">{program.time}</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-3">{program.description}</p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <span>Apresentado por: {program.host}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Jornal */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3 mb-2">
+                  <Mic className="w-6 h-6 text-blue-600" />
+                  <CardTitle className="text-lg">Jornal Ripiiaia</CardTitle>
+                </div>
+                <CardDescription>
+                  Notícias, entrevistas e reportagens sobre cultura, espiritualidade e sociedade amazônica.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    Acessar Jornal
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            {/* IPTV */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3 mb-2">
+                  <Radio className="w-6 h-6 text-blue-600" />
+                  <CardTitle className="text-lg">IPTV Ripiiaia</CardTitle>
+                </div>
+                <CardDescription>
+                  Canal de vídeos, transmissões ao vivo e conteúdos audiovisuais da floresta.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    Acessar IPTV
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -167,37 +181,20 @@ const RadioRipiiaia = () => {
         </div>
       </section>
 
-      {/* Sobre a Rádio */}
+      {/* Mini Blog sobre a Plataforma */}
       <section className="py-16 px-4">
         <div className="container mx-auto text-center max-w-4xl">
-          <h3 className="text-3xl font-bold mb-8 text-gray-800">Nossa Missão</h3>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            A Rádio Ripiiaia é mais que uma estação de música. Somos um ponte sonora que conecta 
-            tradições ancestrais com a contemporaneidade, levando a cultura amazônica e a espiritualidade 
-            para todos os cantos do mundo através de uma programação cuidadosamente selecionada.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Radio className="w-8 h-8 text-blue-600" />
-              </div>
-              <h4 className="font-semibold text-gray-800 mb-2">Transmissão 24h</h4>
-              <p className="text-gray-600">Música ininterrupta para sua jornada espiritual</p>
-            </div>
-            <div>
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="w-8 h-8 text-blue-600" />
-              </div>
-              <h4 className="font-semibold text-gray-800 mb-2">Programação Especial</h4>
-              <p className="text-gray-600">Conteúdo autoral e apresentadores dedicados</p>
-            </div>
-            <div>
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Volume2 className="w-8 h-8 text-blue-600" />
-              </div>
-              <h4 className="font-semibold text-gray-800 mb-2">Alta Qualidade</h4>
-              <p className="text-gray-600">Servidor dedicado para experiência premium</p>
-            </div>
+          <h3 className="text-3xl font-bold mb-8 text-gray-800">Sobre a Plataforma Ripi Iaiá</h3>
+          <div className="bg-white/80 rounded-xl shadow p-8 text-gray-700">
+            <p className="text-lg mb-4">
+              A Ripi Iaiá é uma plataforma multifacetada dedicada à cultura, espiritualidade e inovação social na Amazônia. Nosso objetivo é conectar pessoas, saberes e tradições, promovendo o intercâmbio de experiências e a valorização da diversidade.
+            </p>
+            <p className="text-lg mb-4">
+              Aqui você encontra rádio online, jornal, IPTV, playlists especiais e conteúdos autorais, tudo pensado para fortalecer a identidade amazônica e inspirar transformação coletiva.
+            </p>
+            <p className="text-lg">
+              Junte-se a nós nessa jornada de conexão, aprendizado e celebração da floresta e de seus povos!
+            </p>
           </div>
         </div>
       </section>
